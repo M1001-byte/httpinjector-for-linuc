@@ -1,0 +1,23 @@
+{
+    "Profiles":[
+        {
+            "Name": "Abono Personal",
+            "ssh": "SSH_HOST:SSH_PORT@USERNAME:PASSWORD",
+            "proxy": "YOUR_PROXY:80",
+	        "payload":"GET / HTTP/1.1[crlf]Host: [host][crlf]User-Agent: [ua][crlf][crlf]",
+            "sni": ""
+        }
+    ],
+    "Settings":{
+        "timeout": 10,
+        "bind_port": 9090,
+        "recv_buffer_size": 32768
+    },
+    "Pinger":{
+        "host": "this-page-intentionally-left-blank.org:80", 
+        "timeout": 2,
+        "max_failed": 1,
+        "_commnet": "data_ping == true, turn on airplane mode when ping is failed - data_ping == false, ssh ping, to keep the connection alive",
+        "data_ping": true
+    }
+}
